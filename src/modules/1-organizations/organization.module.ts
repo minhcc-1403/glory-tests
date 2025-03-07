@@ -4,6 +4,7 @@ import { OrganizationController } from "./organization.controller";
 import { OrganizationService } from "./organization.service";
 import { Organization, OrganizationSchema } from "./schemas/organization.schema";
 
+// MODULE: handle all organization related operations
 @Module({
   imports: [MongooseModule.forFeature([{ name: Organization.name, schema: OrganizationSchema }])],
   controllers: [OrganizationController],

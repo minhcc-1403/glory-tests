@@ -5,7 +5,7 @@ import { BaseService } from "~base-inherit/base.service";
 import { CreateAssetDto } from "~modules/3-assets/dto/create-asset.dto";
 import { Asset, AssetDocument } from "./schemas/asset.schema";
 
-// TODO: IMPLEMENTATION ASSET TRANSACTION
+// TASK2: IMPLEMENTATION ASSET TRANSACTION
 @Injectable()
 export class AssetService extends BaseService<AssetDocument> {
   private assetModel: Model<AssetDocument>;

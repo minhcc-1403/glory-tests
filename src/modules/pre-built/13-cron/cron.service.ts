@@ -18,7 +18,7 @@ export interface AssetFetch {
 
 const convertDateNumToMS = (dateNum: number) => new Date(dateNum * 1000);
 
-// TODO: IMPLEMENTATION TEST
+// TASK1: IMPLEMENTATION ASSET TRANSACTION
 @Injectable()
 export class CronService {
   private readonly API_URL = "https://669ce22d15704bb0e304842d.mockapi.io/assets";
