@@ -1,69 +1,73 @@
-# NestJS Generator
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+</p>
 
-This is a NestJS generator designed to accelerate the development of modern and scalable applications. With a set of pre-configured modules and tools, this generator enables rapid application setup, saving time for developers and improving code quality.
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-## Features
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-- **Modular Architecture**: Leverages NestJS's modular structure for easy maintenance and scalability.
-- **MongoDB Integration**: Pre-configured MongoDB setup with Mongoose for schema-based data modeling and pagination.
-- **Real-Time Communication**: Out-of-the-box support for real-time communication using Socket.IO and @nestjs/websockets.
-- **Authentication & Authorization**: JWT-based authentication and role-based access control (RBAC) for secure user management.
-- **File Uploads & Image Handling**: Integrated with Cloudinary for easy image and file handling with transformations and optimizations.
-- **Email & Notifications**: Built-in email system using @nestjs-modules/mailer with support for SMTP and third-party providers.
-- **Cache & Performance Optimization**: Redis integration for caching and improving application performance.
-- **Testing Setup**: Jest pre-configured for unit tests, integration tests, and e2e testing. Coverage reports included.
-- **Code Quality & Linting**: ESLint and Prettier integrated for consistent code style and quality.
-- **Flexible Configuration Management**: Centralized configuration management using @nestjs/config for different environments.
-- **Security**: Password hashing using argon2 for secure password storage.
-- **Custom Middleware & Interceptors**: Easily extendable with custom middleware and interceptors for logging, validation, and exception handling.
-- **API Query & Filtering**: Supports flexible filtering, sorting, and pagination with api-query-params.
+## Description
 
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Directory and File Descriptions
+## Installation
 
-- **.docker**: Contains files related to Docker configuration and custom setup for Docker containers.
-- **.ecosystem**: Contains configuration files for PM2, which is used to manage the application in production.
-- **.github**: Stores GitHub Actions configurations for continuous integration and deployment (CI/CD).
-- **.husky**: Contains configuration for Husky git hooks to enforce linting, tests, and other pre-commit checks.
-- **.nginx-configs**: Holds the configurations for deploying the application with Nginx as a reverse proxy.
-- **.scripts**: Scripts for automating build, deployment, and other processes.
-- **.vscode**: Contains settings for Visual Studio Code users, including recommended extensions and workspace settings.
-- **aws**: Configuration files related to AWS, such as CloudFormation templates or AWS SDK setup.
-- **dist**: The directory where the compiled output of the project is stored after running `npm run build`.
-- **node_modules**: Standard directory for Node.js dependencies.
-- **public**: Stores static files like images, fonts, and other assets that are served by the application.
-- **sqls**: SQL files for database migrations, setup, and other database-related operations.
-- **src**: The main source directory that contains all application-related code.
-  - **base-inherit**: Contains base classes and interfaces for the application's core functionality.
-  - **common**: Holds shared constants, utility functions, and helpers used throughout the app.
-  - **configurations**: Stores configuration files like database connections, application settings, and other environment-specific configurations.
-  - **exceptions**: Defines custom exception filters for centralized error handling.
-  - **guards**: Contains authentication and authorization guards that control access to routes.
-  - **helpers**: A collection of utility functions for general-purpose use in the application.
-  - **keys**: Stores sensitive data such as encryption keys, third-party API keys, and more.
-  - **middlewares**: Defines middlewares that can be used to intercept requests and responses.
-  - **modules**: Feature-specific modules that group together related controllers, services, and other components.
-  - **shared**: Common services and helpers used across different modules.
-  - **utils**: Additional utility functions for generic application logic.
-  - **app.controller.ts**: The root controller that manages incoming HTTP requests.
-  - **app.module.ts**: The root module that imports and wires up other modules.
-  - **app.service.ts**: The root service that contains the application's core business logic.
-  - **bootstrap.ts**: Initializes and bootstraps the NestJS application.
-  - **main.ts**: The main entry point to start the application.
-- **test**: Contains test files for unit, integration, and end-to-end testing.
-- **.dockerignore**: Specifies files to be ignored when building Docker images.
-- **.editorconfig**: Defines file types and code style rules for consistent formatting across different editors.
-- **.env**: Environment-specific configuration, including secrets and credentials for production.
-- **.env.local**: Local environment configuration, used during development.
-- **.eslintrc.js**: Configuration file for ESLint to enforce coding standards.
-- **.gitignore**: Specifies files and directories that should be ignored by Git.
-- **.prettierrc**: Configuration file for Prettier to ensure consistent code formatting.
-- **commitlint.config.js**: Configures commit message linting to enforce conventional commit standards.
-- **nest-cli.json**: NestJS CLI configuration that contains project-specific settings for the NestJS application.
-- **package.json**: Metadata about the project, including dependencies, scripts, and versioning information.
-- **pnpm-lock.yaml**: Lock file for `pnpm`, a fast and efficient package manager.
-- **README.md**: The project's main README file, containing information about the project, its setup, and usage.
-- **tsconfig.build.json**: TypeScript configuration specific to building the application.
-- **tsconfig.json**: TypeScript configuration file for general project settings.
+```bash
+$ pnpm install
+```
 
-This structure is designed to make the application easy to maintain, scalable, and adaptable for different environments.
+## Running the app
+
+```bash
+# development
+$ pnpm run start
+
+# watch mode
+$ pnpm run start:dev
+
+# production mode
+$ pnpm run start:prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ pnpm run test
+
+# e2e tests
+$ pnpm run test:e2e
+
+# test coverage
+$ pnpm run test:cov
+```
+
+## Support
+
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## Stay in touch
+
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
+
+## License
+
+Nest is [MIT licensed](LICENSE).
